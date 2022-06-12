@@ -1,0 +1,16 @@
+****************************************************
+   ITCS 2530 - Programming Assignment for week #3   
+****************************************************
+
+Please enter the name of item (no spaces)...........:glassware
+Is the item fragile? (y=yes/n=no)...................:Y
+Please enter your order total.......................:99.00
+Please enter destination. (usa/can/aus).............:aus
+
+Your item is...............................GLASSWARE
+Your shipping cost is......................$16.00
+Your are shipping to.......................AUS
+Your total shipping costs are..............$115.00
+
+-------------------------------------------Thank You!
+
