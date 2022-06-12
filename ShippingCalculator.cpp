@@ -107,14 +107,14 @@ int main()
     outputData << orderTotal << endl;
 
     //Prompts the user to enter the destination to ship to, to the console
-    cout << "Please enter destination. (usa/can/aus)" << setw(14) << right << ":";
+    cout << "Please enter destination. (usa/can/aus/mars)" << setw(14) << right << ":";
     cin >> destination;
 
     //Prints out the destination selected by the user to Order.txt file
-    outputData << "Please enter destination. (usa/can/aus)" << setw(14) << right << ":";
+    outputData << "Please enter destination. (usa/can/aus/mars)" << setw(14) << right << ":";
     outputData << destination << endl;
  
-    if (destination == "usa" || destination == "can" || destination == "aus") {
+    if (destination == "usa" || destination == "can" || destination == "aus" || destination == "mars") {
         //Left empty if one of the options was selected to skip to the code below 
     }
     else {
@@ -140,8 +140,11 @@ int main()
         else if (destination == "can") {
             shippingCost = 8.00;
         }
+        else if (destination == "aus") {
+            shippingCost = 10.00; 
+        }
         else {
-            shippingCost = 10.00; // AUS acts as the default if the user didn't enter USA or CAN
+            shippingCost = 20.00; // If usa or can or aus not entered the default destination is mars
         }
     }
     else if (orderTotal <= 100.00 && orderTotal >= 50.01) {
@@ -151,8 +154,11 @@ int main()
         else if (destination == "can") {
             shippingCost = 12.00;
         }
-        else {
+        else if (destination == "aus") {
             shippingCost = 14.00;
+        }
+        else {
+            shippingCost = 50.00;
         }
     }
     else if (orderTotal <= 150.00 && orderTotal >= 100.01) {
@@ -162,8 +168,11 @@ int main()
         else if (destination == "can") {
             shippingCost = 15.00;
         }
-        else {
+        else if (destination == "aus") {
             shippingCost = 17.00;
+        }
+        else {
+            shippingCost = 80.00;
         }
     }
     else {
